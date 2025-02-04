@@ -1,86 +1,59 @@
-.outer-container {
-  position: absolute;
-  border-radius: 25px;
-  width:300px;
-  height:400px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+* {
+  font-family: 'Segoe UI';
+  border-radius: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "title-box title-box"
+    "form-box form-box"
+    "location-box location-box"
+    "data-box data-box"
+    "data-box data-box";
   background-color: #333333;
-  border: 1px solid #9c9c9c;
+  row-gap: 10px;
 }
 
 .title-container {
-  position: absolute;
-  border-radius: 25px;
-  width: 250px;
-  height: 75px;
-  top: 13%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  grid-area: title-box;
   background-color: #444444;
-  border: 1px solid #9c9c9c;
+  margin: 0% 20%;
+  margin-top: 2%;
+  text-align: center;
+  color: white;
 }
 
-form {
-  position: absolute;
-  border-radius: 25px;
-  width: 210px;
-  height: 15px;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.form-container {
+  grid-area: form-box;
+  background-color: #444444;
+  margin: 0% 20%;
+  text-align: center;
+  padding: 10px;
+}
+
+.input-container {
+  text-align: center;
+}
+
+.button-container {
 }
 
 .location-container {
-  position: absolute;
-  border-radius: 25px;
-  width: 250px;
-  height: 75px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  grid-area: location-box;
   background-color: #444444;
-  border: 1px solid #9c9c9c;
-}
-
-.location-header {
-  position: absolute;
-  margin: 0px;
-  width: 210px;
-  height: 50px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0% 20%;
+  text-align: center;
+  color: white;
 }
 
 .data-container {
-  position: absolute;
-  border-radius: 25px;
-  width: 250px;
-  height: 125px;
-  top: 77%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  grid-area: data-box;
   background-color: #444444;
-  border: 1px solid #9c9c9c;
-}
-
-h1 {
+  margin: 0% 20%;
+  margin-bottom: 2%;
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #FFFFFF;
-  font-size: 12px;
-}
-
-button {
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-h3 {
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #FFFFFF;
-  font-size: 20px;
+  color: white;
 }

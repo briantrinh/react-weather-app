@@ -41,22 +41,29 @@ function App() {
   }, [zip]);
 
   return (
-    <div class="outer-container">
+    <div class="grid-container">
+
       <title> US Weather App </title>
+
       <div class="title-container">
-        <h3> US Weather App </h3>
+        <h1> US Weather App </h1>
       </div>
-      <form onSubmit = {handleSubmit}>
-        <input type="text" placeholder="Enter US Zip Code" value={zipCode} onChange={handleChange}></input>
-        <button type="submit"> Submit </button>
-      </form>
+
+      <div class="form-container">
+        <form onSubmit = {handleSubmit}>
+          <input type="text" placeholder="Enter US Zip Code" value={zipCode} onChange={handleChange} class="input-container"></input>
+          <button type="submit" class="button-container"> Submit </button>
+        </form>
+      </div>
+
       <div class="location-container">
-        {location && <h1 class="location-header"> {location} </h1> }
+        {location && <h3> {location} </h3>}
       </div>
+
       <div class="data-container">
-        {temperature && <h1> {temperature + "°C / " + Math.round( (temperature * 9 / 5 + 32) * 10)/10 + "°F"} </h1>}
-        {weatherCode && <h1> {weatherCode} </h1>}
-        {weatherCode && <h1> Include Picture </h1>}
+        {temperature && <h3> {temperature + "°C / " + Math.round( (temperature * 9 / 5 + 32) * 10)/10 + "°F"} </h3>}
+        {weatherCode && <h3> {weatherCode} </h3>}
+        {weatherCode && <h3> Include Picture </h3>}
       </div>
     </div>
   );
