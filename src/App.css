@@ -38,9 +38,6 @@
   text-align: center;
 }
 
-.button-container {
-}
-
 .location-container {
   grid-area: location-box;
   background-color: #444444;
